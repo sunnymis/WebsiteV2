@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.bio {
+  max-width: 40%;
+  padding-right: 36px;
+  font-size: 18px;
+}
+
+.image-container {
+  width: 250px;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 36px;
+}

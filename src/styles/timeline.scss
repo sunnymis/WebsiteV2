@@ -1,0 +1,156 @@
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 48px;
+
+  &:before {
+    /* This styles the vertical bar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 24px;
+    height: 100%;
+    width: 5px;
+    background: #e8e8e8;
+    z-index: 1;
+  }
+
+  .timeline-item {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-left: 16px;
+    box-sizing: border-box;
+    margin-bottom: 48px;
+  }
+
+  .timeline-section {
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    box-shadow:  0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  }
+
+  .circle {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    left: -34px;
+    background: #00BD9D;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #00Bd9D;
+    z-index: 2;
+    box-shadow:  6px 6px 8px 0 hsla(0, 0%, 0%, 0.2);
+  }
+
+  .timeline-item-header {
+    position: relative;
+    padding: 16px 0;
+    background-color: #3496FF;
+    color: #fff; 
+    text-align: center;
+
+    &:before {
+      content: '';
+      border: 1px solid #3496FF;
+      background-color: #3496FF;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 5px;
+      left: -7px;
+      transform: rotateZ(-45deg);
+    }
+    
+    .employer,
+    .job-title {
+      display: block;
+      text-align: center;
+    }
+
+    .employer {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .job-title {
+      font-weight: normal;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+  }
+
+  .content-card-description {            
+    list-style-type: disc;
+    padding-left: 36px;
+    padding-right: 24px;
+    font-size: 16px;
+
+    li {
+      margin-bottom: 12px;
+    }
+  }
+
+  .content-card-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 24px;
+
+    span {
+      display: inline-block;
+      background-color: #00BD9D;
+      color: rgba(255,255,255,0.8);
+      padding: 5px 10px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      border-radius: 18px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width : 1024px) {  
+  .timeline {
+    padding: 0;
+    
+    &:before {
+      left: 50%;
+    }
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      left: auto;
+      right: -18px;
+    }
+
+    .timeline-item {
+      padding: 16px 36px;
+      width: 50%;
+      margin-bottom: 0;
+      
+      &.right {
+        display: flex;
+        align-self: flex-end;
+  
+        .circle {
+          left: -13px;
+        }
+      }
+
+      &.left {
+        .timeline-item-header {
+          &:before {
+            left: auto;
+            right: -7px;
+          }
+        }
+      }
+    }
+  }  
+}
