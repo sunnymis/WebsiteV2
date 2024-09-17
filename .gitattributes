@@ -19,3 +19,10 @@
 # Exclude the `.htaccess` file from GitHub's language statistics
 # https://github.com/github/linguist#using-gitattributes
 dist/.htaccess linguist-vendored
+
+/.github export-ignore
+/.gitattributes export-ignore
+/.editorconfig export-ignore
+/.travis.yml export-ignore
+**/*.js.snap export-ignore
+/static/css export-ignore
